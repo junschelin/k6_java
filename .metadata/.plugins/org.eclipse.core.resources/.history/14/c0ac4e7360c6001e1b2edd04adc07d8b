@@ -1,0 +1,29 @@
+//추 2, 3, 5g 활용하여 입력받은 숫자 맞추기
+
+package Exercise;
+
+import java.util.Scanner;
+
+public class ch5_1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("10 ~ 100 사이 숫자를 입력하세요");
+		Scanner sc = new Scanner(System.in); // Scanner 객체 생성
+		int num = sc.nextInt(); // 입력받을 숫자를 num에 저장
+				
+		if (num<10 || num>100) {
+			num = 0;
+			System.out.println("다시 입력하세요");
+			System.out.println("10 ~ 100 사이 숫자를 입력하세요");
+			sc = new Scanner(System.in); // Scanner 객체 생성
+			num = sc.nextInt(); // 입력받을 숫자를 num에 저장
+		}
+		
+		
+		
+		
+		
+	}
+
+}

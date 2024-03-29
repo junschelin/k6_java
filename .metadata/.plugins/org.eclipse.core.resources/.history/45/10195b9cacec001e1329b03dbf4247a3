@@ -1,0 +1,70 @@
+package edu.pnu;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class Test_Statement1 {
+	public static void main(String[] args) {
+		
+		Connection con = null;
+		try {
+			String driver = "com.mysql.cj.jdbc.Driver";
+			String url = "jdbc:mysql://localhost:3306/world";
+			String username = "scott";
+			String password = "tiger";
+			
+			Class.forName(driver);
+			con = DriverManager.getConnection(url, username, password);
+			
+			Statement st = con.createStatement();
+			ResultSet rs1 = st.executeQuery("select * from city limit 10");
+			
+			while(rs1.next()) {
+				System.out.println(rs1.getString("id")+", ");
+				System.out.println(rs1.getString("name")+ ", ");
+				System.out.println(rs1.getString("countrycode")+ ", ");
+				System.out.println(rs1.getString("district")+", ");
+				System.out.println(rs1.getString("population")+"\n");
+			}
+			
+			ResultSet rs2= st.executeQuery("select code, name, continent, region, surfacearea, indepyear, population, lifeexpectancy, gnp, gnpold, localname, govermentform, headofstate, capital from country limit 10");
+			
+			while(rs2.next()) {
+				System.out.println(rs1.getString("code")+", ");
+				System.out.println(rs1.getString("name")+ ", ");
+				System.out.println(rs1.getString("continent")+ ", ");
+				System.out.println(rs1.getString("region")+", ");
+				System.out.println(rs1.getString("surfacearea")+", ");
+				System.out.println(rs1.getString("indepyear")+", ");
+				System.out.println(rs1.getString("population")+ ", ");
+				System.out.println(rs1.getString("lifeexpectancy")+ ", ");
+				System.out.println(rs1.getString("gnp")+", ");
+				System.out.println(rs1.getString("gnpold")+", ");
+				System.out.println(rs1.getString("localname")+", ");
+				System.out.println(rs1.getString("govermentform")+ ", ");
+				System.out.println(rs1.getString("headofstate")+ ", ");
+				System.out.println(rs1.getString("capital")+", ");
+			}
+			
+			ResultSet rs3 = st.executeQuery("select CountryCode, Language, IsOfficial, Percentage from countrylanguage limit 10");
+			while(rs3.next()) {
+				System.out.println(rs1.getString("countrycode")+", ");
+				System.out.println(rs1.getString("language")+ ", ");
+				System.out.println(rs1.getString("IsOfficial")+ ", ");
+				System.out.println(rs1.getString("Percentage")+", ");
+			}
+			
+			rs1.close();
+			rs2.close();
+			rs3.close();
+			st.close();
+			con.close();
+			
+		} catch (Exception e) {
+			System.out.println("연결실패");
+		}
+		
+	}
+}

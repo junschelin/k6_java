@@ -1,0 +1,55 @@
+package com.ruby.java.ch04;
+
+import java.util.Random;
+
+public class Ex1 {
+
+	public static void main(String[] args) {
+		
+		int A[][] = new int[3][4]; //난수 입력
+		int B[][] = new int[4][5]; //난수 입력
+		int C[][] = new int[3][5]; 
+		int D[][] = new int[3][4]; //난수 입력
+		int E[][] = new int[3][4]; 
+		int F[][] = new int[4][4]; 
+	
+		Random rand = new Random();
+
+		
+		for(int i=0 ; i<A.length; i++) {
+			for(int j = 0; j<A[i].length; i++) {
+				A[i][j] = rand.nextInt(100);
+				D[i][j] = rand.nextInt(100);
+				System.out.print(A[i]+"\t");
+ 			}
+			System.out.println("\t");
+		}
+		for(int i=0 ; i<B.length; i++) {
+			for(int j = 0; j<B[i].length; i++) {
+				B[i][j] = rand.nextInt(100);
+				}
+		}
+		
+		
+		
+		
+	// 1번. C = A * B; (행렬 곱)
+		int num = 0;
+		
+		for(int i=0; i<A.length; i++) {
+			for(int j=0; j<A[i].length; j++) {
+				num = num + A[i][j] * B[i][j];
+			}
+		}
+		
+		
+		
+	// E = A + D; (행렬 합)
+	// F = A의 전치 행렬
+		
+		
+		
+		
+	}
+
+}

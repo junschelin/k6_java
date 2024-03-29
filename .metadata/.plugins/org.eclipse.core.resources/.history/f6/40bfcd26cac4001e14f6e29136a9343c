@@ -1,0 +1,27 @@
+package com.ruby.java.ch03;
+
+import java.util.Scanner;
+
+public class Test_T2 {
+//소수 판단
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("num : ");
+		int num = sc.nextInt();
+		int sosu = 0;
+		
+		for(int i=2 ; i<1000; i++) {
+			if(num % i == 0) {
+				sosu = 1;
+			} else {
+				sosu = 0;
+			}
+			
+		}
+		if(sosu == 0 ) {
+		System.out.println("소수입니다.");		
+		} else {
+		System.out.println("소수가 아닙니다.");
+		}
+	}
+}
