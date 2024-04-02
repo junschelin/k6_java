@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
-    <fullyQualifiedTypeName name="java.lang.annotation.Annotation"/>
-    <fullyQualifiedTypeName name="com.ruby.java.ch13.annotation.MyAnno"/>
-    <fullyQualifiedTypeName name="java.lang.reflect.Method"/>
     <fullyQualifiedTypeName name="com.uby.java.ch14.MyClass1"/>
     <fullyQualifiedTypeName name="com.uby.java.ch14.MyInterface"/>
     <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
@@ -60,4 +56,8 @@
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="com.mysql.cj.jdbc.result.ResultSetMetaData"/>
     <fullyQualifiedTypeName name="java.sql.ResultSetMetaData"/>
+    <fullyQualifiedTypeName name="datastructure.chap10.SimpleChainHash"/>
+    <fullyQualifiedTypeName name="datastructure.chap10.OpenHash"/>
+    <fullyQualifiedTypeName name="datastructure.chap10.OpenHash2.Bucket"/>
+    <fullyQualifiedTypeName name="datastructure.chap10.OpenHash2.Status"/>
 </qualifiedTypeNameHistroy>
